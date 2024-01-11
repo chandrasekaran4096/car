@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    
+}
+header{
+    display:flex ;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: white;
+    animation: header 2s  ease-in-out;
+}
+@keyframes header{
+    0%{
+        transform: translateY(-100%);
+    }
+}
+nav li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 600;
+}
+li:hover{
+    color: red;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.content{
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 5%;
+    color: white;
+    overflow: hidden;
+    animation: content 2s ease-in-out;
+    /* justify-content: space-between; */
+}
+@keyframes content {
+    0%{opacity: 0;
+    transform: translateX(-50%);
+}
+    
+}
+.content h1{
+    /* font-family: sans-serif;
+    font-weight: 900px; */
+    font-size: 80px;
+    margin-bottom: 1%;
+    letter-spacing: 8px;
+}
+.content h3{
+    font-size: 25px;
+    margin-bottom: 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+span{
+    color: yellow;
+}
+.content p{
+    font-size: 20px;
+    margin-bottom: 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button{
+    padding: 15px 30px;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+}
+button:hover{
+    background-color: red;
+}
+.image{
+    width: 50%;
+    margin-top: 8%;
+    z-index: -1;
+}
+img{
+    width: 40rem;
+    animation: car 5s infinite ease-in-out;
+}
+@keyframes car {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-45%);
+    }
+    
+}
+@media  screen and (max-width:1200px) {
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -3%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 30rem;
+    }
+    
+}
+@media  screen and (max-width:576px) {
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    .content h1,h3,p{
+        margin-bottom: 5%;
+    }
+
+    .image{
+        width: 100%;
+        position: absolute;
+        bottom: -4%;
+        display: flex;
+        justify-content: center;
+    }
+    img{
+        width: 30rem;
+    }
+    
+}
